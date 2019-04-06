@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <title>CSS</title>
+  <meta charset="utf-8">
+  <style>
+		#active {
+      color:orange;
+    }
+    .saw {
+      color:gray;
+    }
+    /*
+    line element
+    */
+    a {color:Black;
+			text-decoration:none;
+    }
+    /*
+    block level element
+    */
+    h2 {
+      border:5px solid hotpink;
+      padding:10px;
+      margin:10px;
+      display:block;
+      width:45px;
+    }
+    /*
+    박스모델 활용
+    */
+    h1 {
+			font-size:45px;
+			text-align:center;
+      border-bottom:1px solid gray;
+      margin:0;
+      padding:16px;
+		}
+    ol{
+      border-right:1px solid gray;
+      width:100px;
+      margin:0;
+      padding:20px;
+    }
+    /*
+    그리드
+    */
+    #grid{
+        border:5px solid lightblue;
+        display:grid;
+        grid-template-columns: 120px 1fr;
+      }
+    .gridJ{
+      border:2.5px solid lightgray;
+      padding-left:10px;
+      }
+    /*
+    그리드 활용
+    */
+    #gridH{
+      display:grid;
+      grid-template-columns: 120px 1fr;
+    }
+    #gridH ol{
+      padding-left:25px;
+    }
+    #gridH #article{
+      padding-left:40px;
+    }
+    /*
+    반응형 디자인
+    */
+    #media{
+        border:5px solid lightgreen;
+        font-size:20px;
+    }
+    @media(max-width:100px) {
+        #media{display:none;}
+    }
+    /*
+    미디어 쿼리를 이용해서 반응형 디자인 구현하기
+    */
+    @media(max-width:100px){
+      #gridH{display: block;}
+      ol{border-right:none;}
+      h1{border-bottom:none;}
+    }
+    /*
+    배경
+    */
+    body{
+  		background-image: url("Background_color.jpg");
+  		background-repeat:no-repeat;
+  		background-position:center center;
+  		background-size:cover;
+      background-attachment:scroll;}
+  </style>
+</head>
+<body>
+  <h1><a href="index.html">J's WEB</a></h1>
+  <div id="gridH">
+  <ol>
+    <li><a href="1.html" class="saw">HTML</a></li>
+    <li><a href="2. Video.html" class="saw">Video</a></li>
+    <li><a href="3. Scratch.html" class="saw" id="active">Scratch</a></li>
+		<li><a href="4. CSS.html" Style="color:red; text-decoration:underline">CSS</a></li>
+    <li><a href="5. JavaScript.html">JavaScript</a></li>
+  </ol>
+  <div id="article">
+  <h2>CSS</h2>
+  <p>
+    Cascading Style Sheets (<a href="https://en.wikipedia.org/wiki/Cascading_Style_Sheets" Style="text-decoration:underline">CSS</a>) is a style sheet language used for describing the presentation of a document written in a markup language.<br>
+		[1] Although most often used to set the visual style of web pages and user interfaces written in HTML and XHTML,<br>
+		the language can be applied to any XML document, including plain XML, SVG and XUL, and is applicable to rendering in speech, or on other media.<br>
+		Along with HTML and JavaScript, CSS is a cornerstone technology used by most websites to create visually engaging webpages,<br>
+		user interfaces for web applications, and user interfaces for many mobile applications.
+  </p>
+  </div>
+</div>
+  <div id="grid">
+      <div class="gridJ">NAVIGATION</div>
+      <div class="gridJ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. <br>
+      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<br>
+      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.<br>
+      Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+    </div>
+    <div id="media">
+      Responsive
+    </div>
+<br><br><br><br><br><br><br>
+  </body>
+  </html>
